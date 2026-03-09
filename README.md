@@ -1,16 +1,60 @@
-# React + Vite
+# ComponentHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ComponentHub 是一个开源组件发布平台，为开发者提供集中管理和发现各种编程语言组件的平台。
 
-Currently, two official plugins are available:
+## 功能特性
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **组件浏览**：按语言分类浏览热门组件
+- **搜索功能**：支持按组件名称、关键词或作者搜索
+- **组件详情**：查看组件的详细信息、安装指南和使用说明
+- **响应式设计**：适配不同屏幕尺寸
 
-## React Compiler
+## 技术栈
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18 + Vite
+- React Router v6
+- Remix Icon
+- CSS3 (响应式设计)
 
-## Expanding the ESLint configuration
+## 快速开始
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 开发模式
+
+```bash
+npm run dev
+```
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+## 项目结构
+
+```
+component-hub/
+├── src/
+│   ├── components/          # 组件目录
+│   │   ├── Navbar.jsx       # 顶部导航栏
+│   │   ├── LanguageNav.jsx  # 语言分类导航
+│   │   ├── ComponentCard.jsx # 组件卡片
+│   │   ├── ComponentGrid.jsx # 组件网格
+│   │   ├── Breadcrumb.jsx   # 面包屑导航
+│   │   └── ComponentDetail.jsx # 组件详情
+│   ├── App.jsx              # 应用主组件
+│   ├── App.css              # 全局样式
+│   └── main.jsx             # 应用入口
+├── package.json             # 项目配置
+└── vite.config.js           # Vite配置
+```
+
+## 许可证
+
+MIT
