@@ -1,0 +1,888 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SourceHanSans-Regular', sans-serif;
+  background-color: #f9fafb;
+  color: #1a1a1a;
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  height: 65px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon-text {
+  font-family: 'remixicon';
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.logo-title {
+  font-size: 20px;
+  font-family: 'SourceHanSans-Bold';
+  color: #1a1a1a;
+}
+
+.logo-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 448px;
+  margin: 0 300px;
+}
+
+.search-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'remixicon';
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+.search-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 16px 0 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.publish-button {
+  width: 88px;
+  height: 36px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.publish-button:hover {
+  background-color: #1d4ed8;
+}
+
+.user-avatar {
+  width: 33px;
+  height: 32px;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Language Navigation */
+.language-nav {
+  margin-bottom: 32px;
+}
+
+.category-title {
+  font-size: 18px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.category-tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.tag:not(.active) {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.tag:not(.active):hover {
+  background-color: #e5e7eb;
+}
+
+/* Component Grid */
+.component-grid {
+  margin-top: 32px;
+}
+
+.grid-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.grid-title {
+  font-size: 20px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #2563eb;
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+.arrow-icon {
+  font-family: 'remixicon';
+  font-size: 16px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(448px, 1fr));
+  gap: 24px;
+}
+
+/* Component Card */
+.component-card {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.component-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.component-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  margin-bottom: 16px;
+}
+
+.component-title-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.component-name {
+  font-size: 18px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+}
+
+.component-version {
+  font-size: 12px;
+  font-family: 'SourceHanSans-Medium';
+  color: #2563eb;
+  background-color: #eff6ff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.component-description {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.card-content {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.repo-info {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.repo-label {
+  color: #6b7280;
+  margin-right: 8px;
+}
+
+.repo-url {
+  color: #2563eb;
+  font-family: 'SourceHanSans-Medium';
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.stat-label {
+  color: #6b7280;
+}
+
+.stat-value {
+  color: #1a1a1a;
+  font-family: 'SourceHanSans-Medium';
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-info {
+  font-size: 14px;
+}
+
+.author-label {
+  color: #6b7280;
+  margin-right: 8px;
+}
+
+.author-name {
+  color: #1a1a1a;
+  font-family: 'SourceHanSans-Medium';
+}
+
+.view-button {
+  padding: 8px 16px;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+  width: 100%;
+  height: 53px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.breadcrumb-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.breadcrumb-item {
+  font-size: 14px;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item:hover {
+  color: #2563eb;
+}
+
+.breadcrumb-item.active {
+  color: #1a1a1a;
+  font-family: 'SourceHanSans-Medium';
+}
+
+.breadcrumb-arrow {
+  font-family: 'remixicon';
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.breadcrumb-spacer {
+  width: 8px;
+  height: 16px;
+}
+
+/* Component Detail Page */
+.component-detail {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.left-content {
+  flex: 1;
+  max-width: 907px;
+}
+
+.right-sidebar {
+  width: 459px;
+}
+
+/* Component Header */
+.component-header {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.title-info {
+  flex: 1;
+}
+
+.title-version {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.title-version h1 {
+  font-size: 24px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.version-tag {
+  font-size: 12px;
+  font-family: 'SourceHanSans-Medium';
+  color: #2563eb;
+  background-color: #eff6ff;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.component-description {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #e5e7eb;
+}
+
+.button-icon {
+  font-family: 'remixicon';
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Stats Info */
+.stats-info {
+  display: flex;
+  gap: 48px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dbeafe;
+}
+
+.stat-icon span {
+  font-family: 'remixicon';
+  font-size: 16px;
+  color: #2563eb;
+}
+
+.stat-data {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+}
+
+/* Info Tags */
+.info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.tag-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.tag-value {
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  color: #1a1a1a;
+}
+
+/* Repo Info */
+.repo-info {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.repo-info h2 {
+  font-size: 18px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.repo-url {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.url-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.repo-url a {
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.repo-url a:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+/* Installation Guide */
+.installation-guide {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.installation-guide h2 {
+  font-size: 18px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.code-block {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code-block code {
+  color: #374151;
+}
+
+/* Component Intro */
+.component-intro {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.component-intro h2 {
+  font-size: 18px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.component-intro p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.component-intro ul {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+.component-intro li {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* Right Sidebar */
+.quick-actions {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.quick-actions h3 {
+  font-size: 16px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.quick-action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.quick-action-button:hover {
+  background-color: #e5e7eb;
+}
+
+.quick-action-button:last-child {
+  margin-bottom: 0;
+}
+
+/* Related Components */
+.related-components {
+  background-color: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+.related-components h3 {
+  font-size: 16px;
+  font-family: 'SourceHanSans-SemiBold';
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.related-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.related-item:last-child {
+  border-bottom: none;
+}
+
+.related-name {
+  font-size: 14px;
+  font-family: 'SourceHanSans-Medium';
+  color: #1a1a1a;
+}
+
+.related-downloads {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+  
+  .search-box {
+    margin: 0 100px;
+  }
+  
+  .main-content {
+    padding: 16px;
+  }
+  
+  .content-container {
+    flex-direction: column;
+    padding: 16px;
+  }
+  
+  .left-content {
+    max-width: 100%;
+  }
+  
+  .right-sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+  }
+  
+  .logo-area {
+    order: 1;
+  }
+  
+  .search-box {
+    order: 3;
+    width: 100%;
+    margin: 12px 0;
+  }
+  
+  .user-area {
+    order: 2;
+  }
+  
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .title-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .action-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .action-button {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .stats-info {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .info-tags {
+    gap: 16px;
+  }
+}
+
+/* Font Families */
+@font-face {
+  font-family: 'SourceHanSans-Regular';
+  src: local('Source Han Sans Regular');
+}
+
+@font-face {
+  font-family: 'SourceHanSans-Medium';
+  src: local('Source Han Sans Medium');
+}
+
+@font-face {
+  font-family: 'SourceHanSans-SemiBold';
+  src: local('Source Han Sans SemiBold');
+}
+
+@font-face {
+  font-family: 'SourceHanSans-Bold';
+  src: local('Source Han Sans Bold');
+}
+
+@font-face {
+  font-family: 'remixicon';
+  src: local('Remix Icon');
+}
